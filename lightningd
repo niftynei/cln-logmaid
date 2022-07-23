@@ -1,0 +1,14 @@
+/PATH/TO/.lightning/logs/log {
+        daily
+        rotate 7
+        compress
+        notifempty
+        missingok
+        dateext
+        prerotate
+                /PATH/TO/parselogs.py
+        endscript
+        postrotate
+                kill -HUP $(cat /PATH/TO/.lightning/lightning.pid)
+        endscript
+}
