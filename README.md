@@ -11,6 +11,7 @@ rotates log daily. It also calls a prerotation handler which looks for
 1. Copy `lightningd` into `/etc/logrotate.d`
 2. Update the `lightningd` to point to the correct logfile, where `parselogs.py` is and the PID file location for your lightningd daemon
 3. Update `parselogs.py` with your email information (password and email to send/receive from)
+4. Make sure parselogs.py can run `chmod +x parselogs.py`
 4. ???
 5. Have your logs rotate automatically and get emailed notifications when things break.
 
